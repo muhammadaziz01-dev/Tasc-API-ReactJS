@@ -11,7 +11,7 @@ const index = ({data:{image, title, description , category , rating ,price}}) =>
                 <img src={image} alt={title} className="w-[100%] h-[100%] object-contain" />
             </div>
             <div className="card-body p-4">
-                <h5 className="card-title text-center text-[20px] pb-2 font-bold text-lime-500">{title.length > 30 ? title.slice(0, 25) + " ..." : title}</h5>
+                <h5 className="card-title text-center text-[20px] pb-2 font-bold text-lime-500">{title.length > 30 ? title.slice(0, 23) + " ..." : title}</h5>
                 <p className="card-text text-[16px] font-medium h-[140px] overflow-hidden">{description.length > 170 ? description.slice(0, 156) + " ..." : description}</p>
                 <p className="card-text text-[18px] font-bold text-slate-800 ">Category: <span className="text-lime-500 ml-2">{category.toUpperCase()}</span></p>
                 <p className="card-text text-[18px] font-bold text-slate-800 ">Price: <span className="text-red-500 ml-2">{price} $</span></p>
