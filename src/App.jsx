@@ -27,8 +27,9 @@ const App = () => {
     })()
   }, [])
 
-
-
+const productAddedToCart = (element) =>{
+  return alert(element + " added to cart !!")
+}
 
 
   return (
@@ -37,7 +38,7 @@ const App = () => {
         loading ? <Loader/> : <CardGrid>
         {
           data.length? data.map((el) => {
-            return <Card key={el.id} data={el}/>
+            return <Card key={el.id} data={el} message={productAddedToCart}/>
           }):<Error error={error}/>
         }
       </CardGrid>

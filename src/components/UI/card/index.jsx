@@ -2,8 +2,10 @@
 
 import "./style.scss";
 
-const index = ({data:{image, title, description , category , rating ,price}}) => {
+import Button from "../button"
 
+const index = ({ data: { image, title, description, category, rating, price }, message} ) => {
+console.log(message);
     return (
         <div className="card w-[330px]  border shadow-md rounded-md cursor-pointer hover:shadow-xl duration-200">
 
@@ -17,7 +19,7 @@ const index = ({data:{image, title, description , category , rating ,price}}) =>
                 <p className="card-text text-[18px] font-bold text-slate-800 ">Price: <span className="text-red-500 ml-2">{price} $</span></p>
                 <p className="card-text text-[18px] font-bold text-slate-800 ">Rating: <span className="text-red-500 mx-2">{rating.rate} </span> Count : <span className="text-red-500 mx-2">{rating.count}</span></p>
             </div>
-
+            <Button message ={message} title={title} />
         </div>
     );
 };
